@@ -1,15 +1,15 @@
 <?php
-//TODO: Clase de TipoCatalogo
+//TODO: Clase de TiposCatalogo
 require_once('../config/comun.php');
 
-class TipoCatalogo
+class TiposCatalogo
 {
-    //TODO: Implementar los metodos de la clase TipoCatalogo
+    //TODO: Implementar los metodos de la clase TiposCatalogo
     public $tabla;
 
     public function __construct()
     {
-        $this->tabla = new ClaseTabla("tipocatalogo","idtipocatalogo");
+        $this->tabla = new ClaseTabla("tiposcatalogo","id_tipocatalogo");
         $this->tabla->AgregarCampo("tipo");
     }
 
