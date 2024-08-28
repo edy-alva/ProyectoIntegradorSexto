@@ -8,18 +8,18 @@ $method = $_SERVER["REQUEST_METHOD"];
 if ($method == "OPTIONS") {
     die();
 }
-//TODO: controlador de CATALOGO
-require_once('../models/catalogo.model.php');
+//TODO: controlador de CATALOGOS
+require_once('../models/catalogos.model.php');
 //error_reporting(0);
-$catalogo = new Catalogo;
+$catalogos = new Catalogos;
 
 switch ($_GET["op"]) {
-        //TODO: operaciones de catalogo
+        //TODO: operaciones de catalogos
 
-    case 'todos': //TODO: Procedimiento para cargar todos los datos del catalogo
-        $datos = array(); // Defino un arreglo para almacenar los valores que vienen de la clase catalogo.model.php
+    case 'todos': //TODO: Procedimiento para cargar todos los datos del catalogos
+        $datos = array(); // Defino un arreglo para almacenar los valores que vienen de la clase catalogos.model.php
         
-        $datos = $catalogo->todos(); // Llamo al metodo todos de la clase catalogo.model.php
+        $datos = $catalogos->todos(); // Llamo al metodo todos de la clase catalogos.model.php
         while ($row = mysqli_fetch_assoc($datos)) //Ciclo de repeticion para asociar los valor almancenados en la variable $datos
         {
             $todos[] = $row;
@@ -27,36 +27,36 @@ switch ($_GET["op"]) {
         echo json_encode($todos);
         break;
     case 'uno': //TODO: procedimiento para obtener un registro de la base de datos
-        $idcatalogo = $_POST["idcatalogo"];
+        $idcatalogos = $_POST["idcatalogos"];
         $datos = array();
-        $datos = $catalogo->uno($idcatalogo);
+        $datos = $catalogos->uno($idcatalogos);
         $res = mysqli_fetch_assoc($datos);
         echo json_encode($res);
         break;
         
-    case 'insertar':  //TODO: Procedimiento para insertar un catalogo en la base de datos
+    case 'insertar':  //TODO: Procedimiento para insertar un catalogos en la base de datos
         $detalle = $_POST["detalle"];
         $idtipo = $_POST["idtipo"];
         $valor = $_POST["valor"];
         $datos = array();
-        $datos = $catalogo->insertar($detalle, $idtipo, $valor);
+        $datos = $catalogos->insertar($detalle, $idtipo, $valor);
         //echo json_encode($datos);
         break;
         
-    case 'actualizar':  //TODO: Procedimiento para actualizar un Catalogo en la base de datos
+    case 'actualizar':  //TODO: Procedimiento para actualizar un Catalogos en la base de datos
         $idcatalogo = $_POST["idcatalogo"];
         $detalle = $_POST["detalle"];
         $idtipo = $_POST["idtipo"];
         $valor = $_POST["valor"];
         $datos = array();
-        $datos = $catalogo->actualizar($idcatalogo, $detalle, $idtipo, $valor);
+        $datos = $catalogos->actualizar($idcatalogo, $detalle, $idtipo, $valor);
         echo json_encode($datos);
         break;
         
-    case 'eliminar': //TODO: Procedimiento para eliminar un catalogo en la base de datos
+    case 'eliminar': //TODO: Procedimiento para eliminar un catalogos en la base de datos
         $idcatalogo = $_POST["idcatalogo"];
         $datos = array();
-        $datos = $catalogo->eliminar($idcatalogo);
+        $datos = $catalogos->eliminar($idcatalogo);
         echo json_encode($datos);
         break;
 }
