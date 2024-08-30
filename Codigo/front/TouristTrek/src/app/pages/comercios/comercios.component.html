@@ -1,1 +1,31 @@
-<p>comercios works!</p>
+<h5 class="my-4 d-flex justify-content-center">Administración de Comercios</h5>
+
+<form [formGroup]="formRegistro" (submit)="registrar()">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" formControlName="nombre"/>
+        <label for="floatingInput">Nombre de Comercio</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" formControlName="direccion"/>
+        <label for="floatingInput">Dirección</label>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" formControlName="latitud"/>
+                <label for="floatingInput">Latitud</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" formControlName="longitud"/>
+                <label for="floatingInput">Longitud</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-grid mt-4">
+        <button type="submit" class="btn btn-secondary p-2">Guardar</button>
+    </div>
+</form>

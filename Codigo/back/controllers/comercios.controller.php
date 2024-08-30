@@ -35,6 +35,14 @@ switch ($_GET["op"]) {
         break;
         
     case 'insertar':  //TODO: Procedimiento para insertar un comercios en la base de datos
+
+        if(!isset($_POST["nombre"]) || !isset($_POST["direccion"]) || !isset($_POST["id_estado"]) || !isset($_POST["longitud"]) || !isset($_POST["latitud"])){
+            $datos = array("error" => "Faltan datos requeridos");
+            echo json_encode($datos);
+            exit();  
+        }
+
+
         $nombre = $_POST["nombre"];
         $direccion = $_POST["direccion"];
         $id_estado = $_POST["id_estado"];
@@ -42,7 +50,7 @@ switch ($_GET["op"]) {
         $latitud = $_POST["latitud"];
         $datos = array();
         $datos = $comercios->insertar($nombre,$direccion,$id_estado,$longitud,$latitud);
-        //echo json_encode($datos);
+        echo json_encode($datos);
         break;
         
     case 'actualizar':  //TODO: Procedimiento para actualizar un Comercios en la base de datos

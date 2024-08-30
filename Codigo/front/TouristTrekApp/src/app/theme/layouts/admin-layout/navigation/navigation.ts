@@ -66,35 +66,33 @@ export const NavigationItems: NavigationItem[] = [
   },
   {
     id: 'utilities',
-    title: 'Catálogos',
+    title: 'UI Components',
     type: 'group',
     icon: 'icon-navigation',
     children: [
       {
-        id: 'typography',
-        title: 'Clientes',
+        id: 'comercios',
+        title: 'Comercios',
         type: 'item',
         classes: 'nav-item',
-        url: '/typography',
+        url: '/comercios',
         icon: 'font-size'
       },
       {
-        id: 'color',
-        title: 'Proveedores',
+        id: 'actividades',
+        title: 'Actividades',
         type: 'item',
         classes: 'nav-item',
-        url: '/color',
+        url: '/actividades',
         icon: 'bg-colors'
       },
       {
-        id: 'tabler',
-        title: 'Tabler',
+        id: 'lugares',
+        title: 'Lugares',
         type: 'item',
         classes: 'nav-item',
-        url: 'https://ant.design/components/icon',
-        icon: 'ant-design',
-        target: true,
-        external: true
+        url: '/lugares',
+        icon: 'ant-design'
       }
     ]
   },

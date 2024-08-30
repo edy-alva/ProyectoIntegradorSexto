@@ -32,6 +32,14 @@ const routes: Routes = [
       {
         path: 'comercios',
         loadComponent: () => import('./pages/comercios/comercios.component').then((m) => m.ComerciosComponent)
+      },
+      {
+        path: 'actividades',
+        loadComponent: () => import('./pages/actividades/actividades.component').then((m) => m.ActividadesComponent)
+      },
+      {
+        path: 'lugares',
+        loadComponent: () => import('./pages/lugares/lugares.component').then((m) => m.LugaresComponent)
       }
     ]
   },

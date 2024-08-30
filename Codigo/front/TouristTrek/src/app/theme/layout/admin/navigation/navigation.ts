@@ -67,36 +67,34 @@ const NavigationItems = [
     ]
   },
   {
-    id: 'elements',
-    title: 'Elements',
+    id: 'catalogos',
+    title: 'Catálogos',
     type: 'group',
     icon: 'icon-navigation',
     children: [
       {
-        id: 'typography',
-        title: 'Typography',
+        id: 'comercios',
+        title: 'Comercios',
         type: 'item',
         classes: 'nav-item',
-        url: '/typography',
+        url: '/comercios',
         icon: 'ti ti-typography'
       },
       {
-        id: 'color',
-        title: 'Colors',
+        id: 'actividades',
+        title: 'Actividades',
         type: 'item',
         classes: 'nav-item',
-        url: '/color',
+        url: '/actividades',
         icon: 'ti ti-brush'
       },
       {
-        id: 'tabler',
-        title: 'Tabler',
+        id: 'lugares',
+        title: 'Lugares',
         type: 'item',
         classes: 'nav-item',
-        url: 'https://tabler-icons.io/',
-        icon: 'ti ti-plant-2',
-        target: true,
-        external: true
+        url: '/lugares',
+        icon: 'ti ti-plant-2'
       }
     ]
   },

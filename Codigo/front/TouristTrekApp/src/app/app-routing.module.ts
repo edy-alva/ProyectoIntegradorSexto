@@ -31,6 +31,42 @@ const routes: Routes = [
       {
         path: 'sample-page',
         loadComponent: () => import('./demo/other/sample-page/sample-page.component')
+      },
+      {
+        path: 'comercios',
+        loadComponent: () => import('./pages/comercios/comercios.component').then((m) => m.ComerciosComponent)
+      },
+      {
+        path: 'nuevocomercio',
+        loadComponent: () => import('./pages/comercios/nuevo-comercio/nuevo-comercio.component').then((m) => m.NuevoComercioComponent),
+      },
+      {
+        path: 'editar-comercio/:id',
+        loadComponent: () => import('./pages/comercios/nuevo-comercio/nuevo-comercio.component').then((m) => m.NuevoComercioComponent),
+      },
+      {
+        path: 'actividades',
+        loadComponent: () => import('./pages/actividades/actividades.component').then((m) => m.ActividadesComponent)
+      },
+      {
+        path: 'nuevaactividad',
+        loadComponent: () => import('./pages/actividades/nueva-actividad/nueva-actividad.component').then((m) => m.NuevaActividadComponent),
+      },
+      {
+        path: 'editar-actividad/:id',
+        loadComponent: () => import('./pages/actividades/nueva-actividad/nueva-actividad.component').then((m) => m.NuevaActividadComponent),
+      },
+      {
+        path: 'lugares',
+        loadComponent: () => import('./pages/lugares/lugares.component').then((m) => m.LugaresComponent)
+      },
+      {
+        path: 'nuevolugar',
+        loadComponent: () => import('./pages/lugares/nuevo-lugar/nuevo-lugar.component').then((m) => m.NuevoLugarComponent),
+      },
+      {
+        path: 'editar-lugar/:id',
+        loadComponent: () => import('./pages/lugares/nuevo-lugar/nuevo-lugar.component').then((m) => m.NuevoLugarComponent),
       }
     ]
   },

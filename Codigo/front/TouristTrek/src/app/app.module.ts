@@ -19,6 +19,7 @@ import { SharedModule } from './theme/shared/shared.module';
 import { ConfigurationComponent } from './theme/layout/admin/configuration/configuration.component';
 import { GuestComponent } from './theme/layout/guest/guest.component';
 import { ComerciosComponent } from './pages/comercios/comercios.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,14 @@ import { ComerciosComponent } from './pages/comercios/comercios.component';
     ConfigurationComponent,
     GuestComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, BrowserAnimationsModule, ComerciosComponent],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule, 
+    SharedModule, 
+    BrowserAnimationsModule, 
+    ReactiveFormsModule,
+    ComerciosComponent
+  ],
   providers: [NavigationItem],
   bootstrap: [AppComponent]
 })

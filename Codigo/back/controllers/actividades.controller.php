@@ -39,7 +39,7 @@ switch ($_GET["op"]) {
         $id_tipo_actividad = $_POST["id_tipo_actividad"];
         $datos = array();
         $datos = $actividades->insertar($nombre,$id_tipo_actividad);
-        //echo json_encode($datos);
+        echo json_encode($datos);
         break;
         
     case 'actualizar':  //TODO: Procedimiento para actualizar un Actividades en la base de datos
