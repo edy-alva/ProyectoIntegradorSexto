@@ -67,6 +67,18 @@ const routes: Routes = [
       {
         path: 'editar-lugar/:id',
         loadComponent: () => import('./pages/lugares/nuevo-lugar/nuevo-lugar.component').then((m) => m.NuevoLugarComponent),
+      },
+      {
+        path: 'actividad-comercio',
+        loadComponent: () => import('./pages/actividad-comercio/actividad-comercio.component').then((m) => m.ActividadComercioComponent)
+      },
+      {
+        path: 'nuevoactividadcomercio',
+        loadComponent: () => import('./pages/actividad-comercio/nuevo-actividad-comercio/nuevo-actividad-comercio.component').then((m) => m.NuevoActividadComercioComponent),
+      },
+      {
+        path: 'editar-lugar/:id',
+        loadComponent: () => import('./pages/actividad-comercio/nuevo-actividad-comercio/nuevo-actividad-comercio.component').then((m) => m.NuevoActividadComercioComponent),
       }
     ]
   },

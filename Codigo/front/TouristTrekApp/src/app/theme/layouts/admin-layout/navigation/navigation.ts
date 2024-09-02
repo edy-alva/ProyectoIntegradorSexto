@@ -87,6 +87,14 @@ export const NavigationItems: NavigationItem[] = [
         icon: 'bg-colors'
       },
       {
+        id: 'actividad-comercio',
+        title: 'Actividades por Comercio',
+        type: 'item',
+        classes: 'nav-item',
+        url: '/actividad-comercio',
+        icon: 'bg-colors'
+      },
+      {
         id: 'lugares',
         title: 'Lugares',
         type: 'item',

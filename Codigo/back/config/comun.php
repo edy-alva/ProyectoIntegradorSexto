@@ -152,4 +152,6 @@ class ClaseTabla
             $con->close();
         }
     }
+
+    
 }
