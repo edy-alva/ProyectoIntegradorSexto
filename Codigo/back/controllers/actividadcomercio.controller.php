@@ -19,7 +19,7 @@ switch ($_GET["op"]) {
 
     case 'todos': //TODO: Procedimiento para cargar todos los datos del actividadcomercio
         $datos = array(); // Defino un arreglo para almacenar los valores que vienen de la clase actividadcomercio.model.php
-
+        $todos = null;
         $datos = $actividadcomercio->todos(); // Llamo al metodo todos de la clase actividadcomercio.model.php
         while ($row = mysqli_fetch_assoc($datos)) //Ciclo de repeticion para asociar los valor almancenados en la variable $datos
         {
