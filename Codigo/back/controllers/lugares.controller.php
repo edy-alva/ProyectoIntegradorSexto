@@ -40,7 +40,7 @@ switch ($_GET["op"]) {
         $latitud = $_POST["latitud"];
         $datos = array();
         $datos = $lugares->insertar($nombre,$longitud,$latitud);
-        //echo json_encode($datos);
+        echo json_encode($datos);
         break;
         
     case 'actualizar':  //TODO: Procedimiento para actualizar un Lugares en la base de datos

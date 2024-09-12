@@ -11,7 +11,7 @@ class ClaseBaseDatos
     private $usuario = "root";
     private $pass = "";
     private $base = "touristtrekbd";
-    private $puerto = "3386";
+    private $puerto = "3306";
     
 
     public function Conectar()
@@ -152,4 +152,6 @@ class ClaseTabla
             $con->close();
         }
     }
+
+    
 }
